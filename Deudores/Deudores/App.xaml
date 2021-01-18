@@ -4,10 +4,10 @@
              x:Class="Deudores.App">
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="colorPrimary">#e74c3c</Color>
-            <Color x:Key="colorPrimaryDark">#c0392b</Color>
+            <Color x:Key="colorPrimary">#49acda</Color>
+            <Color x:Key="colorPrimaryDark">#49acda</Color>
             <Color x:Key="colorAccent">#34495e</Color>
-            <Color x:Key="colorRed">#ff0000</Color>
+            <Color x:Key="colorRed">#49acda</Color>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

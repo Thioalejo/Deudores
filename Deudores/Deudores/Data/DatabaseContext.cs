@@ -40,7 +40,5 @@ namespace Deudores.Data
         {
             return await Connection.Table<Deudor>().FirstOrDefaultAsync(c=>c.Id==id);
         }
-
-
     }
 }

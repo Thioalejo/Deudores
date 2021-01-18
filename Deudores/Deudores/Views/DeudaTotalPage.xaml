@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Deudores.Views.DeudaTotalPage"
+             Title="Deuda total">
+    <ContentPage.Content>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5">
+            <Label Text="Deuda total: " 
+                   FontSize="40" 
+                   HorizontalTextAlignment="Start"/>
+            <Label Text="{Binding TotalDeudores, StringFormat='{0:#,0.#0}'}" 
+                   FontSize="40" 
+                   TextColor="Red" 
+                   x:Name="lblTotalDeudores" HorizontalTextAlignment="End"></Label>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

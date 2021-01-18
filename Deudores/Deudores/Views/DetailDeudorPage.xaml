@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Deudores.Views.ListDeudorPage"
+             x:Class="Deudores.Views.DetailDeudorPage"
              Title="Contactos">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Actualizar" x:Name="Actualizar" Clicked="Actualizar_Clicked"/>
@@ -17,21 +17,21 @@
                 <Label Text="Nombre" FontSize="Medium" TextColor="{StaticResource colorPrimary}" Margin="0,10"></Label>
                 <Entry x:Name="nombre"></Entry>
 
-                <Label Text="Descripción" FontSize="Medium" TextColor="{StaticResource colorPrimary}" Margin="0,10"></Label>
+                <Label Text="Descripción" x:Name="lbldescripcion" FontSize="Medium" TextColor="{StaticResource colorPrimary}" Margin="0,10"></Label>
                 <Entry x:Name="descripcion" HeightRequest="100"></Entry>
 
-                <Label Text="Total de la deuda" FontSize="Medium" TextColor="{StaticResource colorPrimary}" Margin="0,10"></Label>
+                    <Label Text="Total de la deuda" x:Name="lblvalorDeuda" FontSize="Medium" TextColor="{StaticResource colorPrimary}" Margin="0,10"></Label>
                 <Editor Placeholder="$ 0" x:Name="valorDeuda" Keyboard="Numeric" Unfocused="ValorDeuda_Unfocused"></Editor>
 
-                <Label Text="Fecha de abono" FontSize="Medium" TextColor="{StaticResource colorPrimary}" Margin="0,10"></Label>
+               <Label Text="Fecha de abono" x:Name="lblFecha" FontSize="Medium" TextColor="{StaticResource colorPrimary}" Margin="0,10"></Label>
                 <DatePicker x:Name="datePiker"></DatePicker>
 
-                <Label Text="Abono" FontSize="Medium" TextColor="{StaticResource colorPrimary}" Margin="0,10"></Label>
+                    <Label Text="Abono" FontSize="Medium" x:Name="lblAbono_1" TextColor="{StaticResource colorPrimary}" Margin="0,10"></Label>
                 <Editor Placeholder="$ 0" x:Name="Abono_1" Keyboard="Numeric" Unfocused="Abono_1_Unfocused"></Editor>
 
                 <StackLayout Orientation="Horizontal">
                         <Label Text="Estado: " FontSize="Medium" TextColor="{StaticResource colorPrimary}" Margin="0,10"></Label>
-                        <Switch x:Name="switchEstadoDeudor"></Switch>
+                        <Switch x:Name="switchEstadoDeudor" Toggled="SwitchEstadoDeudor_Toggled"></Switch>
                  </StackLayout>
             </StackLayout>
         </Frame>

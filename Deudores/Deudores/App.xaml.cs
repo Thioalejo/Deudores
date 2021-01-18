@@ -1,5 +1,6 @@
 ﻿using Deudores.Data;
 using Deudores.Views;
+using Deudores.Views.Menu;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -14,7 +15,7 @@ namespace Deudores
         {
             InitializeComponent();
             InitializeDatabase();
-            MainPage = new NavigationPage(new HomePage());
+            MainPage = new MasterDetailPage1();
         }
 
         private void InitializeDatabase()

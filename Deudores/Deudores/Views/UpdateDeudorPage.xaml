@@ -8,7 +8,7 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <ScrollView>
-        <Frame BorderColor="Orange"
+            <Frame BorderColor="#49acda"
                                CornerRadius="10"
                                HasShadow="True"
                                Margin="5">
