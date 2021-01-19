@@ -4,9 +4,9 @@
              x:Class="Deudores.Views.Menu.MasterDetailPage1Detail"
                Title="Deudores">
 
-    <!--<ContentPage.ToolbarItems>
+    <ContentPage.ToolbarItems>
         <ToolbarItem Text="Contactos" Clicked="ToolbarItem_Clicked"></ToolbarItem>
-    </ContentPage.ToolbarItems>-->
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <ListView x:Name="lista_de_deudores" HasUnevenRows="True" ItemSelected="Lista_de_deudores_ItemSelected">
             <ListView.ItemTemplate>
