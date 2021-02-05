@@ -4,12 +4,12 @@
              x:Class="Deudores.Views.DeudaTotalPage"
              Title="Deuda total">
     <ContentPage.Content>
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="5">
             <Label Text="Deuda total: " 
-                   FontSize="40" 
+                   FontSize="20" 
                    HorizontalTextAlignment="Start"/>
             <Label Text="{Binding TotalDeudores, StringFormat='{0:#,0.#0}'}" 
-                   FontSize="40" 
+                   FontSize="20" 
                    TextColor="Red" 
                    x:Name="lblTotalDeudores" HorizontalTextAlignment="End"></Label>
         </StackLayout>

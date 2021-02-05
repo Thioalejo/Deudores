@@ -25,15 +25,13 @@
             <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
                             <Frame 
                                    CornerRadius="5">
-                            <Label VerticalOptions="FillAndExpand" 
+                                <Label VerticalOptions="FillAndExpand" 
                                    VerticalTextAlignment="Center" 
                                    Text="{Binding Title}" 
                                    FontSize="24"
                                    TextColor="{StaticResource colorPrimary}"/>
-                                
                             </Frame>
-                
-             </StackLayout>
+            </StackLayout>
           </ViewCell>
         </DataTemplate>
       </ListView.ItemTemplate>

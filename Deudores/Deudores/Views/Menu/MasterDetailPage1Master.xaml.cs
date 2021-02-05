@@ -36,6 +36,7 @@ namespace Deudores.Views.Menu
                     new MasterDetailPage1MenuItem { Id = 0, Title = "Deudores" },
                     new MasterDetailPage1MenuItem { Id = 1, Title = "Contactos" },
                     new MasterDetailPage1MenuItem { Id = 2, Title = "Deuda total" },
+                    //new MasterDetailPage1MenuItem { Id = 3, Title = "Configuración" },
                 });
             }
             

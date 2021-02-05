@@ -10,30 +10,54 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\NewFolder1\**" />
+    <EmbeddedResource Remove="Views\NewFolder1\**" />
+    <None Remove="Views\NewFolder1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\UpdateDeudorPage.xaml.cs">
+    <Compile Update="Views\Contactos\AddContactPage.xaml.cs">
+      <DependentUpon>AddContactPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Contactos\DetailContactPage.xaml.cs">
+      <DependentUpon>DetailContactPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Contactos\ListContactPage.xaml.cs">
+      <DependentUpon>ListContactPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Deudores\UpdateDeudorPage.xaml.cs">
       <DependentUpon>UpdateDeudorPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\ListDeudorPage.xaml.cs">
-      <DependentUpon>ListDeudorPage.xaml</DependentUpon>
+    <Compile Update="Views\Deudores\DetailDeudorPage.xaml.cs">
+      <DependentUpon>DetailDeudorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Deudores\ListDeudoresPage.xaml.cs">
+      <DependentUpon>ListDeudoresPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\AddDebtorPage.xaml">
+    <EmbeddedResource Update="Views\Contactos\AddContactPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\DeudoresListPage.xaml">
+    <EmbeddedResource Update="Views\Contactos\ListContactPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\HomePage.xaml">
+    <EmbeddedResource Update="Views\Deudores\ListDeudoresPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ListDeudorPage.xaml">
+    <EmbeddedResource Update="Views\Deudores\DetailDeudorPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SettingsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

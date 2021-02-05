@@ -44,7 +44,7 @@ namespace Deudores.Views.Menu
         //double valorTotal;
         private async void LoadItems()
         {
-            var items = await App.Context.GetItemAsync();
+            var items = await App.Context.GetItemActiveAsync();
             lista_de_deudores.ItemsSource = items;
             //foreach (var item in items)
             //{
@@ -60,7 +60,7 @@ namespace Deudores.Views.Menu
 
         private void Lista_de_deudores_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            Navigation.PushAsync(new UpdateDeudorPage((Deudor)e.SelectedItem));
+            Navigation.PushAsync(new DetailContactPage((Deudor)e.SelectedItem));
         }
 
         //private async void BtnArchivar_Clicked(object sender, SelectedItemChangedEventArgs e)

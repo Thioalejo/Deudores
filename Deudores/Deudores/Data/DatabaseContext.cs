@@ -2,6 +2,7 @@
 using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -40,5 +41,7 @@ namespace Deudores.Data
         {
             return await Connection.Table<Deudor>().FirstOrDefaultAsync(c=>c.Id==id);
         }
+
+        public async Task<List<Deudor>> GetItemActiveAsync() => await this.Connection.Table<Deudor>().Where((Expression<Func<Deudor, bool>>)(p => p.Activo == true)).ToListAsync();
     }
 }

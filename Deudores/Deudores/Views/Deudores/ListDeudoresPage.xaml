@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Deudores.Views.ListDeudoresPage"
+             Title="Deudores">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Contactos" Clicked="ToolbarItem_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+   
+    <ContentPage.Content>
+        <ListView x:Name="lista_de_deudores" HasUnevenRows="True" ItemSelected="Lista_de_deudores_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <!--<ViewCell.ContextActions>
+                            --><!--<MenuItem x:Name="btnEditar"
+                                      Text="Editar"
+                                      Clicked="BtnEditar_Clicked"
+                                      CommandParameter="{Binding .}">
+
+                            </MenuItem>--><!--
+                            
+                            <MenuItem x:Name="btnDelete"
+                                      Text="Eliminar"
+                                      Clicked="BtnDelete_Clicked"
+                                      CommandParameter="{Binding .}">
+                                
+                            </MenuItem>
+                        </ViewCell.ContextActions>-->
+
+                        <Frame BorderColor="#49acda"
+                               CornerRadius="10"
+                               HasShadow="True"
+                               Margin="5">
+
+                            <StackLayout>
+                                <Label Text="{Binding Nombre}" FontSize="Large" TextColor="{StaticResource colorPrimary}" HorizontalOptions="CenterAndExpand" BackgroundColor="AliceBlue"></Label>
+                                <Label Text="{Binding Descripcion, StringFormat='Descripción: {0}'}" TextColor="Black"  Margin="0,20,0,0"></Label>
+
+
+                                <Label x:Name="lblFecha" Text="{Binding FechaEntrega, StringFormat='Fecha de último abono: {0:ddd dd} de {0:MMMM yyyy}'}" TextColor="Black"></Label>
+                                <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                                    <Label x:Name="lblAbono" Text="{Binding Abono, StringFormat='Abono: {0:c0}'}" TextColor="Black"></Label>
+                                    <Label Text="{Binding ValorDeuda, StringFormat='Deuda total: {0:c0}'}" TextColor="{StaticResource colorRed}" HorizontalOptions="EndAndExpand" BackgroundColor="Black"></Label>
+                                </StackLayout>
+                                
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

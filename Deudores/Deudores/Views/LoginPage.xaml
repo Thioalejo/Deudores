@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Deudores.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Label Text="Configuración"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Activar clave de acceso: "></Label>
+                <Switch IsToggled="False" HorizontalOptions="EndAndExpand" x:Name="switchActivarClave" ></Switch>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" IsVisible="false" x:Name="stackLayoutClaveDeAcceso">
+            
+                <Entry Placeholder="Ingrese clave" Keyboard="Telephone" IsPassword="True" MaxLength="3"></Entry>
+
+                <Button Text="Asignar clave"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

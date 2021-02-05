@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Deudores.Views.DeudoresListPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Agregar" Clicked="ToolbarItem_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ListView x:Name="lista_de_deudores" HasUnevenRows="True" ItemSelected="Lista_de_deudores_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                          
+                            <MenuItem x:Name="btnDelete"
+                                      Text="Eliminar"
+                                      Clicked="BtnDelete_Clicked"
+                                      CommandParameter="{Binding .}">
+
+                            </MenuItem>
+                        </ViewCell.ContextActions>
+
+                        <Frame BorderColor="#49acda"
+                               CornerRadius="2"
+                               HasShadow="True"
+                               Margin="10">
+
+                            <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Nombre}" FontSize="Title" TextColor="{StaticResource colorPrimary}" HorizontalOptions="Start" BackgroundColor="AliceBlue"></Label>
+                                    <Image Source="contactos_de_google.png" HorizontalOptions="EndAndExpand"></Image>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Debe:" FontSize="Subtitle" TextColor="{StaticResource colorPrimary}" HorizontalOptions="Start" BackgroundColor="AliceBlue"></Label>
+                                    <Label Text="{Binding ValorDeuda, StringFormat='{0:#,0.#0}'}" FontSize="Subtitle" TextColor="{StaticResource colorPrimary}" HorizontalOptions="Start" BackgroundColor="AliceBlue"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

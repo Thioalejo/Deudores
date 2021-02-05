@@ -44,6 +44,11 @@ namespace Deudores.Views.Menu
                     IsPresented = false;
                     break;
 
+                //case "Configuración":
+                //    Detail = new NavigationPage(new SettingsPage());
+                //    IsPresented = false;
+                //    break;
+
                 default:
                     break;
             }
